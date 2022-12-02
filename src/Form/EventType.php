@@ -3,7 +3,7 @@
 namespace App\Form;
 
 use App\Entity\EventList;
-
+use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -13,7 +13,10 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\FormTypeInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+
+
 
 
 
@@ -34,9 +37,9 @@ class EventType extends AbstractType
             ->add('url', UrlType::class, ["attr" => ["class" => "form-control mb-2", "placeholder" => "URL from Event Homepage"]])
             ->add('type', ChoiceType::class, [
                 'choices'  => [
-                    'music' => "low",
-                    'sport' => "normal",
-                    'food' => "high",
+                    'music' => "music",
+                    'sport' => "sport",
+                    'food' => "food",
                     'culture' => "culture"
                 ]
             ], ["attr" => ["class" => "form-control mb-2"]])

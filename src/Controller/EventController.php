@@ -12,7 +12,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 
 class EventController extends AbstractController
 {
-    #[Route('/', name: 'event')]
+    #[Route('/event', name: 'event')]
     public function index(ManagerRegistry $doctrine): Response
     {
         $events = $doctrine->getRepository(EventList::class)->findAll();
