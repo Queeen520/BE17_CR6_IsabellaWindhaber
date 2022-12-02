@@ -1,5 +1,10 @@
 <?php
 
+###################################################
+// HAD TO RE-INSTALL XAMPP AND WRITE THE DATABASE NEW
+###################################################
+
+/*
 namespace App\Entity;
 
 use App\Repository\EventsRepository;
