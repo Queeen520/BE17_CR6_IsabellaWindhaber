@@ -8,10 +8,10 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class UpdateController extends AbstractController
 {
-    #[Route('/update', name: 'app_update')]
-    public function index(): Response
+    #[Route('/update', name: 'update')]
+    public function updateEvent(): Response
     {
-        return $this->render('update/index.html.twig', [
+        return $this->render('event/index.html.twig', [
             'controller_name' => 'UpdateController',
         ]);
     }

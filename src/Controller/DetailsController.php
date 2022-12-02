@@ -8,10 +8,10 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DetailsController extends AbstractController
 {
-    #[Route('/details', name: 'app_details')]
-    public function index(): Response
+    #[Route('/details/{id}', name: 'details')]
+    public function moreEvent(): Response
     {
-        return $this->render('details/index.html.twig', [
+        return $this->render('event/index.html.twig', [
             'controller_name' => 'DetailsController',
         ]);
     }
