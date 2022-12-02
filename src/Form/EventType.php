@@ -24,7 +24,6 @@ class EventType extends AbstractType
             ->add('save', SubmitType::class)
             ->add('save', SubmitType::class)
             ->add('save', SubmitType::class)
-            ->add('save', SubmitType::class)
             ->add('save', SubmitType::class);
     }
 
