@@ -35,8 +35,7 @@ class EventType extends AbstractType
                 'choices'  => [
                     'music' => "music",
                     'sport' => "sport",
-                    'food' => "food",
-                    'culture' => "culture"
+                    'food' => "food"
                 ]
             ], ["attr" => ["class" => "form-control mb-2"]])
             ->add('send', SubmitType::class, ["attr" => ["class" => "form-control mb-2"]]);
