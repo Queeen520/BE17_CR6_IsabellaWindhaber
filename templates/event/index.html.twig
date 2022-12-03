@@ -33,14 +33,14 @@
           <small class="text-dark"> {{ event.start | date() }}</small>
         </span>
       </div>
-      <a class="btn btn-info mt-3">
+      <a href="/details/{id}" class="btn btn-info mt-3">
         <i class="fa-sharp fa-solid fa-ellipsis-vertical"></i> Event Details</a
       >
       <span class="d-flex justify-content-around mt-2 mb-2">
-        <a href="/update" class="w-25 my-1 btn btn-warning"
+        <a href="/update/{id}" class="w-25 my-1 btn btn-warning"
           ><i class="fa-solid fa-square-plus"></i> UPDATE</a
         >
-        <a href="/delete" class="w-25 my-1 btn btn-danger"
+        <a href="/delete/{id}" class="w-25 my-1 btn btn-danger"
           ><i class="fa-solid fa-trash-can"></i> DELETE</a
         >
       </span>
