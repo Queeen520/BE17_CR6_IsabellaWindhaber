@@ -14,10 +14,10 @@ class DetailsController extends AbstractController
     #[Route('/details/{id}', name: 'details')]
     public function details($id, ManagerRegistry $doctrine): Response
     {
-        $event = $doctrine->getRepository(EventList::class)->find($id);
+        $events = $doctrine->getRepository(EventList::class)->find($id);
 
         return $this->render('event/details.html.twig', [
-            "event" => $event
+            "events" => $events
         ]);
     }
 }

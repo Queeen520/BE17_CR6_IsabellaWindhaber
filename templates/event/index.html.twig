@@ -13,7 +13,11 @@
   <div class="row row-cols-3 g-2 mx-2">
     {% for event in events %}
     <div class="card p-2 border border-secondary border-opacity-50 rounded">
-      <img src="..." class="card-img-top" alt="img" />
+      <img
+        src="{{ event.img }}"
+        class="card-img-top rounded"
+        style="width: 100%"
+        alt="img" />
       <div class="card-body">
         <h4 class="fs-3 card-title text-center">{{ event.name }}</h4>
         <p class="fs-5 card-text">
