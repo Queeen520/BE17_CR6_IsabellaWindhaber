@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Symfony\Component\Form\FormTypeInterface;
 use App\Repository\EventListRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;

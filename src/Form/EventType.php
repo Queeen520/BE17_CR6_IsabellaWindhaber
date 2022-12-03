@@ -3,18 +3,18 @@
 namespace App\Form;
 
 use App\Entity\EventList;
-use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\NumberType;
-use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Form\FormTypeInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Validator\Constraints\File;
+
 
 class EventType extends AbstractType
 {
@@ -38,13 +38,31 @@ class EventType extends AbstractType
                     'food' => "food"
                 ]
             ], ["attr" => ["class" => "form-control mb-2"]])
-            ->add('send', SubmitType::class, ["attr" => ["class" => "form-control mb-2"]]);
+
+            ->add('picture', FileType::class, [
+                'label' => 'Image',
+                'mapped' => false,
+                'required' => false,
+                'constraints' => [
+                    new File([
+                        'maxSize' => '4048k',
+                        'mimeTypes' => [
+                            'image/png',
+                            'image/jpg',
+                            'image/jpeg',
+                        ],
+                        'mimeTypesMessage' => 'Please upload a picture',
+                    ])
+                ],
+            ])
+            ->add('Create', SubmitType::class, ["attr" => ["class" => "btn btn-primary"]]);
     }
+
 
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => EventList::class
+            'data_class' => Todo::class
         ]);
     }
 }
