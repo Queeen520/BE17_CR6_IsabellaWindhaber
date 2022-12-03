@@ -12,12 +12,12 @@ use Symfony\Component\Form\FormBuilderInterface;
 
 class EventController extends AbstractController
 {
-    #[Route('/evkkent', name: 'evenkkt')]
+    #[Route('/event', name: 'event')]
     public function index(ManagerRegistry $doctrine): Response
     {
         $events = $doctrine->getRepository(EventList::class)->findAll();
         // dd($entries);
-        return $this->render('evkkent/index.html.twig', [
+        return $this->render('event/index.html.twig', [
             'events' => $events
         ]);
     }
