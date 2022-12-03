@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\EventList;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -14,11 +15,10 @@ class SortController extends AbstractController
 
     public function sortByType(ManagerRegistry $doctrine): Response
     {
-        $repos = $doctrine->getRepository(EventList::class);
+        $music = $doctrine->getRepository(EventList::class)->findBy(['type' => 'music']);
+        $food = $doctrine->getRepository(EventList::class)->findBy(['type' => 'food']);
+        $sport = $doctrine->getRepository(EventList::class)->findBy(['type' => 'sport']);
 
-        $music = $repos->findBy(['type' => 'music']);
-        $food = $repos->findBy(['type' => 'food']);
-        $sport = $repos->findBy(['type' => 'sport']);
 
 
         return $this->render("event/sort.html.twig", [

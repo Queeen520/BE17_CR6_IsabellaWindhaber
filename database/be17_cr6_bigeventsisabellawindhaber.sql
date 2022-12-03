@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 03. Dez 2022 um 13:59
+-- Erstellungszeit: 03. Dez 2022 um 16:15
 -- Server-Version: 10.4.27-MariaDB
 -- PHP-Version: 8.1.12
 
@@ -75,7 +75,9 @@ INSERT INTO `event_list` (`id`, `name`, `start`, `description`, `capacity`, `ema
 (4, 'Pilates Boutique', '2023-01-02 09:30:11', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam vel, id laboriosam, sunt sit inventore fuga aut porro, est officiis placeat laborum voluptate et dolorem quisquam corporis veritatis culpa. Molestias aliquam ipsam tenetur fuga ab minus dolo', 10, 'pilates@mail.com', 66449216782, 'Kärnterstraße 3', 1010, 'Vienna', 'https://pilatesboutiquevienna.at/', 'sport', 'https://dominik-s.de/hofsports/wp-content/uploads/sites/3/2017/03/KURSE-HofSports-Pilates-600x324.jpg'),
 (5, 'Coachella Festival', '2023-04-21 06:30:39', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam vel, id laboriosam, sunt sit inventore fuga aut porro, est officiis placeat laborum voluptate et dolorem quisquam corporis veritatis culpa. Molestias aliquam ipsam tenetur fuga ab minus dolo', 1000, '', 4491173645, '81-800 51st Ave', 92201, 'Indio, CA', 'https://www.coachella.com/driving-directions', 'music', 'https://media1.faz.net/ppmedia/aktuell/1187823897/1.6810651/default-retina/das-riesenrad-des-coachella.jpg'),
 (6, 'Royal Donuts Pop Up Store', '2023-05-15 08:45:55', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid voluptatum obcaecati corrupti fugit reiciendis unde quod, assumenda in voluptatem, eligendi veritatis officiis nihil distinctio consectetur, animi repellat suscipit inventore qui sequi atqu', 15, 'royal@mail.com', 4441123, 'Mariahilfer Straße 25', 1060, 'Vienna', 'https://www.royal-donuts.at\r\n', 'food', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_YGsEP4O1zbbrc4c9Rm4FyLCuRxgSxDv9Ysjxkf15sFVqP4yhwpEXtqhO8lG7THVCTZg&usqp=CAU'),
-(7, 'Wiener Christkindlmarkt', '2022-11-25 08:44:43', 'Das Angebot der Markstandler*innen am Wiener Christkindlmarkt ist einzigartig: Vom Spielzeug, das Kinder glücklich macht über stimmungsvolle Dekoration für die Vorweihnachtszeit und das große Fest bis hin zu Bekleidungsaccessoires für den Winter. Nicht zu', 500, 'office@stadtwienmarketing.at', 43131982000, 'Rathausplatz 1', 1010, 'Vienna', 'https://www.christkindlmarkt.at/', 'food', 'https://www.christkindlmarkt.at/wp-content/uploads/2022/11/221028_Stadt_Wien_Marketing_Christkindlmarkt_Eingang_HD-400x225.jpg');
+(7, 'Wiener Christkindlmarkt', '2022-11-25 08:44:43', 'Das Angebot der Markstandler*innen am Wiener Christkindlmarkt ist einzigartig: Vom Spielzeug, das Kinder glücklich macht über stimmungsvolle Dekoration für die Vorweihnachtszeit und das große Fest bis hin zu Bekleidungsaccessoires für den Winter. Nicht zu', 500, 'office@stadtwienmarketing.at', 43131982000, 'Rathausplatz 1', 1010, 'Vienna', 'https://www.christkindlmarkt.at/', 'food', 'https://www.christkindlmarkt.at/wp-content/uploads/2022/11/221028_Stadt_Wien_Marketing_Christkindlmarkt_Eingang_HD-400x225.jpg'),
+(8, 'Creamfields', '2021-08-05 15:04:55', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sapiente neque nulla accusamus, quibusdam, similique quae iusto aspernatur numquam quis quisquam soluta, recusandae eos rem!', 500, 'party@mail.com', 55477823412, 'Festival Street', 55789, 'Daresbury, Vereinigtes Königreich', 'https://www.festicket.com/de/festivals/creamfields/', 'music', 'https://d49r1np2lhhxv.cloudfront.net/www/admin/uploads/images/TOP20Creamfields.jpg'),
+(9, 'Water Sports Festival', '2023-05-25 12:09:55', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et ipsa consequatur accusamus tempore. Deleniti blanditiis, labore ea repellat magnam, doloribus ipsum, vitae sit nisi natus suscipit tempora facilis incidunt iste adipisci sunt debitis et. Nisi co', 100, 'swim@mail.com', 44788124796, 'Olympia Street 5', 55781, 'München', 'https://www.olympiapark.de/', 'sport', 'https://hotel-schreder.de/fileadmin/_processed_/3/e/csm_olympiapark-muenchen-hotel-12_a547cc6994.jpg');
 
 -- --------------------------------------------------------
 
@@ -126,7 +128,7 @@ ALTER TABLE `messenger_messages`
 -- AUTO_INCREMENT für Tabelle `event_list`
 --
 ALTER TABLE `event_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT für Tabelle `messenger_messages`
