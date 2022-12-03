@@ -21,7 +21,7 @@ class CreateController extends AbstractController
     public function createEvent(Request $request, ManagerRegistry $doctrine, SluggerInterface $slugger): Response
     {
         $event = new EventList();
-        $form = $this->createForm(EventList::class, $event);
+        $form = $this->createForm(EventType::class, $event);
 
         $form->handleRequest($request);
 
