@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 03. Dez 2022 um 13:34
+-- Erstellungszeit: 03. Dez 2022 um 13:59
 -- Server-Version: 10.4.27-MariaDB
 -- PHP-Version: 8.1.12
 
@@ -60,7 +60,7 @@ CREATE TABLE `event_list` (
   `zip` int(11) NOT NULL,
   `city` varchar(255) NOT NULL,
   `url` varchar(255) NOT NULL,
-  `type` varchar(255) NOT NULL,
+  `type` enum('music','sport','food') NOT NULL,
   `img` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 

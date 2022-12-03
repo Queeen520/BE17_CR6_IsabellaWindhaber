@@ -15,7 +15,6 @@ class EventController extends AbstractController
     public function index(ManagerRegistry $doctrine): Response
     {
         $events = $doctrine->getRepository(EventList::class)->findAll();
-        // dd($entries);
         return $this->render('event/index.html.twig', [
             'events' => $events
         ]);

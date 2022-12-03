@@ -1,5 +1,11 @@
 {% extends 'base.html.twig' %} {% block title %}Update Page{% endblock %} {%
 block body %}
-<div class="container">UPDATE PAGE</div>
+<div class="container">
+  <div class="container p-4 border border-secondary border-opacity-50 rounded">
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+  </div>
+</div>
 
 {% endblock %}
